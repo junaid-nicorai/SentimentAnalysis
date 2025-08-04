@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SentimentAnalysis.Api", "SentimentAnalysis.Api\SentimentAnalysis.Api.csproj", "{8EA12CF3-F0CA-479E-9C98-285ACC7C0BC3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SentimentAnalysis.Core", "SentimentAnalysis.Core\SentimentAnalysis.Core.csproj", "{FA612AF7-D22D-4FB3-86E2-43D4DC8CFC73}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8EA12CF3-F0CA-479E-9C98-285ACC7C0BC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EA12CF3-F0CA-479E-9C98-285ACC7C0BC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EA12CF3-F0CA-479E-9C98-285ACC7C0BC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EA12CF3-F0CA-479E-9C98-285ACC7C0BC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA612AF7-D22D-4FB3-86E2-43D4DC8CFC73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA612AF7-D22D-4FB3-86E2-43D4DC8CFC73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA612AF7-D22D-4FB3-86E2-43D4DC8CFC73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA612AF7-D22D-4FB3-86E2-43D4DC8CFC73}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
