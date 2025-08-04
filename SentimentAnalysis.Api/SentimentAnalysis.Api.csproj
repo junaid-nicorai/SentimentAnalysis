@@ -13,6 +13,13 @@
 
   <ItemGroup>
     <ProjectReference Include="..\SentimentAnalysis.Core\SentimentAnalysis.Core.csproj" />
+    <ProjectReference Include="..\SentimentAnalysis.Infrastructure\SentimentAnalysis.Infrastructure.csproj" />
   </ItemGroup>
+
+  <ItemGroup>
+  <Content Include="ml_models\sentiment_model.zip">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </Content>
+</ItemGroup>
 
 </Project>
