@@ -1,35 +1,39 @@
+// Import all necessary namespaces
 using SentimentAnalysis.Core;
 using SentimentAnalysis.Infrastructure;
 
-
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-// This line binds the ModelOptions section from appsettings.json to our ModelOptions class.
-builder.Services.Configure<ModelOptions>(builder.Configuration.GetSection("ModelOptions"));
+// --- 1. CONFIGURE SERVICES (The "DI Container") ---
 
-// This is our new line. It registers our service as a singleton.
-builder.Services.AddSingleton<ISentimentService, SentimentService>();
+// This registers all the classes needed for API Controllers to work.
+builder.Services.AddControllers();
 
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+// This registers the services needed for Swagger UI.
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// This binds our appsettings.json section to our ModelOptions class.
+builder.Services.Configure<ModelOptions>(builder.Configuration.GetSection("ModelOptions"));
 
+// This registers our SentimentService as a singleton implementation for the ISentimentService interface.
+builder.Services.AddSingleton<ISentimentService, SentimentService>();
+
+// --- 2. BUILD THE APPLICATION ---
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// --- 3. CONFIGURE THE HTTP REQUEST PIPELINE (The "Middleware") ---
+
+// This block enables Swagger UI *only* when we are in the "Development" environment.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+// This line enables the routing system to send requests to our controllers.
+// It is ABSOLUTELY ESSENTIAL. If this line is missing, you will get 404 errors.
+app.MapControllers();
 
+// --- 4. RUN THE APPLICATION ---
 app.Run();
-
-record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
-{
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-}

@@ -20,6 +20,16 @@ public class SentimentService : ISentimentService
         // We access the ".Value" property to get the actual ModelOptions object.
         _modelPath = options.Value.ModelPath;
     }
+    
+    // Add this method to SentimentService.cs
+    public Task<SentimentPrediction> PredictAsync(SentimentRequest request, CancellationToken cancellationToken)
+    {
+        // On Day 4, this is where we will use the ML model.
+        // For today, we return a hardcoded result to prove the pipeline works.
+        var dummyPrediction = new SentimentPrediction("Positive");
+        
+        return Task.FromResult(dummyPrediction);
+    }
 
     // This is a placeholder method to demonstrate async file loading.
     // In a real application, this might be part of the service's initialization.
@@ -34,6 +44,6 @@ public class SentimentService : ISentimentService
         // We are not actually loading an ML.NET model yet.
         // This just proves we can access the file asynchronously based on our configuration.
         // We use Task.Delay to simulate real async work.
-        await Task.Delay(100); 
+        await Task.Delay(100);
     }
 }
