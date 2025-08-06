@@ -1,6 +1,9 @@
 // Import the necessary namespaces
 using Microsoft.Extensions.Options;
-using SentimentAnalysis.Core;
+using SentimentAnalysis.Core;// Required for PredictionEnginePool
+using ModelTrainer.Models; // Required for ModelInput and ModelOutput   
+using Microsoft.Extensions.ML; // Required for PredictionEnginePool
+
 using System.IO; // Required for FileStream
 using System.Threading.Tasks; // Required for Task
 
@@ -10,40 +13,37 @@ namespace SentimentAnalysis.Infrastructure;
 public class SentimentService : ISentimentService
 {
     // A private field to hold the path to our model file.
-    private readonly string _modelPath;
+    // ADD THIS LINE:
+    private readonly PredictionEnginePool<ModelInput, ModelOutput> _predictionEnginePool;
 
     // This is CONSTRUCTOR INJECTION.
     // The DI container will see this and automatically pass in the IOptions<ModelOptions> object
     // that we configured in Program.cs on Day 1.
-    public SentimentService(IOptions<ModelOptions> options)
+   // REPLACE THE OLD CONSTRUCTOR WITH THIS NEW ONE:
+    public SentimentService(PredictionEnginePool<ModelInput, ModelOutput> predictionEnginePool)
     {
-        // We access the ".Value" property to get the actual ModelOptions object.
-        _modelPath = options.Value.ModelPath;
+        _predictionEnginePool = predictionEnginePool;
     }
     
     // Add this method to SentimentService.cs
+    // REPLACE THE OLD PredictAsync METHOD WITH THIS NEW ONE:
     public Task<SentimentPrediction> PredictAsync(SentimentRequest request, CancellationToken cancellationToken)
     {
-        // On Day 4, this is where we will use the ML model.
-        // For today, we return a hardcoded result to prove the pipeline works.
-        var dummyPrediction = new SentimentPrediction("Positive");
-        
-        return Task.FromResult(dummyPrediction);
+        // Create a ModelInput instance from the request text.
+        var modelInput = new ModelInput { Text = request.Text };
+
+        // Use the pool to make a prediction.
+        // We specify our model's unique name here.
+        ModelOutput prediction = _predictionEnginePool.Predict(modelName: "SentimentAnalysisModel", example: modelInput);
+
+        // Convert the boolean prediction (true/false) to a human-readable string.
+        string sentiment = prediction.Prediction ? "Positive" : "Negative";
+
+        // Create the final response object.
+        var sentimentPrediction = new SentimentPrediction(sentiment);
+
+        // Return the result, wrapped in a Task.
+        return Task.FromResult(sentimentPrediction);
     }
 
-    // This is a placeholder method to demonstrate async file loading.
-    // In a real application, this might be part of the service's initialization.
-    public async Task LoadModelAsync()
-    {
-        // This 'await using' statement is the key to safe async resource management.
-        // It creates a FileStream to our model file.
-        // When the block is exited, it automatically and asynchronously calls DisposeAsync() on the stream,
-        // which closes the file handle correctly, even if an error occurs.
-        await using var fileStream = new FileStream(_modelPath, FileMode.Open, FileAccess.Read);
-
-        // We are not actually loading an ML.NET model yet.
-        // This just proves we can access the file asynchronously based on our configuration.
-        // We use Task.Delay to simulate real async work.
-        await Task.Delay(100);
-    }
 }

@@ -14,3 +14,8 @@ C:\Users\muham\Desktop\sentiment\SentimentAnalysis.Infrastructure\obj\Debug\net8
 C:\Users\muham\Desktop\sentiment\SentimentAnalysis.Infrastructure\obj\Debug\net8.0\refint\SentimentAnalysis.Infrastructure.dll
 C:\Users\muham\Desktop\sentiment\SentimentAnalysis.Infrastructure\obj\Debug\net8.0\SentimentAnalysis.Infrastructure.pdb
 C:\Users\muham\Desktop\sentiment\SentimentAnalysis.Infrastructure\obj\Debug\net8.0\ref\SentimentAnalysis.Infrastructure.dll
+C:\Users\muham\Desktop\sentiment\SentimentAnalysis.Infrastructure\bin\Debug\net8.0\ModelTrainer.deps.json
+C:\Users\muham\Desktop\sentiment\SentimentAnalysis.Infrastructure\bin\Debug\net8.0\ModelTrainer.runtimeconfig.json
+C:\Users\muham\Desktop\sentiment\SentimentAnalysis.Infrastructure\bin\Debug\net8.0\ModelTrainer.exe
+C:\Users\muham\Desktop\sentiment\SentimentAnalysis.Infrastructure\bin\Debug\net8.0\ModelTrainer.dll
+C:\Users\muham\Desktop\sentiment\SentimentAnalysis.Infrastructure\bin\Debug\net8.0\ModelTrainer.pdb

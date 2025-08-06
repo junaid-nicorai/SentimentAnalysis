@@ -1,6 +1,8 @@
 // Import all necessary namespaces
 using SentimentAnalysis.Core;
 using SentimentAnalysis.Infrastructure;
+using Microsoft.Extensions.ML;
+using ModelTrainer.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,8 +19,14 @@ builder.Services.AddSwaggerGen();
 builder.Services.Configure<ModelOptions>(builder.Configuration.GetSection("ModelOptions"));
 
 // This registers our SentimentService as a singleton implementation for the ISentimentService interface.
-builder.Services.AddSingleton<ISentimentService, SentimentService>();
+// // ADD THESE LINES:
+builder.Services.AddPredictionEnginePool<ModelInput, ModelOutput>()
+    .FromFile(modelName: "SentimentAnalysisModel",
+              filePath: builder.Configuration["ModelOptions:ModelPath"], 
+              watchForChanges: true);
 
+// ADD THIS LINE (it can go right after the pool registration):
+builder.Services.AddScoped<ISentimentService, SentimentService>();
 // --- 2. BUILD THE APPLICATION ---
 var app = builder.Build();
 
