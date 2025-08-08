@@ -1,0 +1,6 @@
+{
+  "ModelTrainer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\muham\\Desktop\\sentiment\\ModelTrainer",
+  "SentimentAnalysis.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\muham\\Desktop\\sentiment\\SentimentAnalysis.Api",
+  "SentimentAnalysis.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\muham\\Desktop\\sentiment\\SentimentAnalysis.Core",
+  "SentimentAnalysis.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\muham\\Desktop\\sentiment\\SentimentAnalysis.Infrastructure"
+}

@@ -174,7 +174,11 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\muham\\Desktop\\sentiment\\ModelTrainer\\ModelTrainer.csproj": {
+                "projectPath": "C:\\Users\\muham\\Desktop\\sentiment\\ModelTrainer\\ModelTrainer.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

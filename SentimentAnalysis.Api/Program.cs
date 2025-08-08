@@ -18,6 +18,9 @@ builder.Services.AddSwaggerGen();
 // This binds our appsettings.json section to our ModelOptions class.
 builder.Services.Configure<ModelOptions>(builder.Configuration.GetSection("ModelOptions"));
 
+// Add this line
+builder.Services.AddScoped<IPredictionService, PredictionServiceAdapter>();
+
 // This registers our SentimentService as a singleton implementation for the ISentimentService interface.
 // // ADD THESE LINES:
 builder.Services.AddPredictionEnginePool<ModelInput, ModelOutput>()
@@ -45,3 +48,6 @@ app.MapControllers();
 
 // --- 4. RUN THE APPLICATION ---
 app.Run();
+
+
+public partial class Program { }

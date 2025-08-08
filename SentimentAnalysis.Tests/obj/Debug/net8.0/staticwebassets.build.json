@@ -1,0 +1,23 @@
+{
+  "Version": 1,
+  "Hash": "T21dK/AbuXwm2cttAatnclKbtfs1nO2FC1q6odGmUN0=",
+  "Source": "SentimentAnalysis.Tests",
+  "BasePath": "_content/SentimentAnalysis.Tests",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\Users\\muham\\Desktop\\sentiment\\SentimentAnalysis.Api\\SentimentAnalysis.Api.csproj",
+      "Version": 2,
+      "Source": "SentimentAnalysis.Api",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
+    }
+  ],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

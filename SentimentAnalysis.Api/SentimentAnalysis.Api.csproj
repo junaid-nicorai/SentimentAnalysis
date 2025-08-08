@@ -16,6 +16,7 @@
     <ProjectReference Include="..\SentimentAnalysis.Core\SentimentAnalysis.Core.csproj" />
     <ProjectReference Include="..\SentimentAnalysis.Infrastructure\SentimentAnalysis.Infrastructure.csproj" />
     <ProjectReference Include="..\ModelTrainer\ModelTrainer.csproj" />
+    <InternalsVisibleTo Include="SentimentAnalysis.Tests" />
   </ItemGroup>
 
   <ItemGroup>
