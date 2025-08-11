@@ -382,6 +382,35 @@
           }
         }
       },
+      "Polly/8.6.2": {
+        "type": "package",
+        "dependencies": {
+          "Polly.Core": "8.6.2"
+        },
+        "compile": {
+          "lib/net6.0/Polly.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Polly.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Polly.Core/8.6.2": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Polly.Core.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Polly.Core.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Swashbuckle.AspNetCore/6.6.2": {
         "type": "package",
         "dependencies": {
@@ -1235,6 +1264,61 @@
         "packageIcon.png"
       ]
     },
+    "Polly/8.6.2": {
+      "sha512": "+irkpMJQ29+o8+u/SdN+1+AP4rB4TGoKZ6gXhD04dPKG+DX2grvKJ6Z6UAK3vYkSQQcbATt+YPt+ac6/X2wVAA==",
+      "type": "package",
+      "path": "polly/8.6.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "lib/net462/Polly.dll",
+        "lib/net462/Polly.pdb",
+        "lib/net462/Polly.xml",
+        "lib/net472/Polly.dll",
+        "lib/net472/Polly.pdb",
+        "lib/net472/Polly.xml",
+        "lib/net6.0/Polly.dll",
+        "lib/net6.0/Polly.pdb",
+        "lib/net6.0/Polly.xml",
+        "lib/netstandard2.0/Polly.dll",
+        "lib/netstandard2.0/Polly.pdb",
+        "lib/netstandard2.0/Polly.xml",
+        "package-icon.png",
+        "package-readme.md",
+        "polly.8.6.2.nupkg.sha512",
+        "polly.nuspec"
+      ]
+    },
+    "Polly.Core/8.6.2": {
+      "sha512": "ImAKLH6qVDjj0vzw+QxMYxxT/NhQrHK+sZE4GT5JbIfDBOrMDbE4we3BR6SqUQCJuKdjOKf3smUjxIgOUUfNVw==",
+      "type": "package",
+      "path": "polly.core/8.6.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "lib/net462/Polly.Core.dll",
+        "lib/net462/Polly.Core.pdb",
+        "lib/net462/Polly.Core.xml",
+        "lib/net472/Polly.Core.dll",
+        "lib/net472/Polly.Core.pdb",
+        "lib/net472/Polly.Core.xml",
+        "lib/net6.0/Polly.Core.dll",
+        "lib/net6.0/Polly.Core.pdb",
+        "lib/net6.0/Polly.Core.xml",
+        "lib/net8.0/Polly.Core.dll",
+        "lib/net8.0/Polly.Core.pdb",
+        "lib/net8.0/Polly.Core.xml",
+        "lib/netstandard2.0/Polly.Core.dll",
+        "lib/netstandard2.0/Polly.Core.pdb",
+        "lib/netstandard2.0/Polly.Core.xml",
+        "package-icon.png",
+        "package-readme.md",
+        "polly.core.8.6.2.nupkg.sha512",
+        "polly.core.nuspec"
+      ]
+    },
     "Swashbuckle.AspNetCore/6.6.2": {
       "sha512": "+NB4UYVYN6AhDSjW0IJAd1AGD8V33gemFNLPaxKTtPkHB+HaKAKf9MGAEUPivEWvqeQfcKIw8lJaHq6LHljRuw==",
       "type": "package",
@@ -1557,6 +1641,7 @@
       "Microsoft.AspNetCore.OpenApi >= 8.0.18",
       "Microsoft.Extensions.ML >= 4.0.2",
       "ModelTrainer >= 1.0.0",
+      "Polly >= 8.6.2",
       "SentimentAnalysis.Core >= 1.0.0",
       "SentimentAnalysis.Infrastructure >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.6.2"
@@ -1568,11 +1653,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\muham\\Desktop\\sentiment\\SentimentAnalysis.Api\\SentimentAnalysis.Api.csproj",
+      "projectUniqueName": "C:\\Users\\muham\\clone\\SentimentAnalysis\\SentimentAnalysis.Api\\SentimentAnalysis.Api.csproj",
       "projectName": "SentimentAnalysis.Api",
-      "projectPath": "C:\\Users\\muham\\Desktop\\sentiment\\SentimentAnalysis.Api\\SentimentAnalysis.Api.csproj",
+      "projectPath": "C:\\Users\\muham\\clone\\SentimentAnalysis\\SentimentAnalysis.Api\\SentimentAnalysis.Api.csproj",
       "packagesPath": "C:\\Users\\muham\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\muham\\Desktop\\sentiment\\SentimentAnalysis.Api\\obj\\",
+      "outputPath": "C:\\Users\\muham\\clone\\SentimentAnalysis\\SentimentAnalysis.Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\muham\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -1587,14 +1672,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\muham\\Desktop\\sentiment\\ModelTrainer\\ModelTrainer.csproj": {
-              "projectPath": "C:\\Users\\muham\\Desktop\\sentiment\\ModelTrainer\\ModelTrainer.csproj"
+            "C:\\Users\\muham\\clone\\SentimentAnalysis\\ModelTrainer\\ModelTrainer.csproj": {
+              "projectPath": "C:\\Users\\muham\\clone\\SentimentAnalysis\\ModelTrainer\\ModelTrainer.csproj"
             },
-            "C:\\Users\\muham\\Desktop\\sentiment\\SentimentAnalysis.Core\\SentimentAnalysis.Core.csproj": {
-              "projectPath": "C:\\Users\\muham\\Desktop\\sentiment\\SentimentAnalysis.Core\\SentimentAnalysis.Core.csproj"
+            "C:\\Users\\muham\\clone\\SentimentAnalysis\\SentimentAnalysis.Core\\SentimentAnalysis.Core.csproj": {
+              "projectPath": "C:\\Users\\muham\\clone\\SentimentAnalysis\\SentimentAnalysis.Core\\SentimentAnalysis.Core.csproj"
             },
-            "C:\\Users\\muham\\Desktop\\sentiment\\SentimentAnalysis.Infrastructure\\SentimentAnalysis.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\muham\\Desktop\\sentiment\\SentimentAnalysis.Infrastructure\\SentimentAnalysis.Infrastructure.csproj"
+            "C:\\Users\\muham\\clone\\SentimentAnalysis\\SentimentAnalysis.Infrastructure\\SentimentAnalysis.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\muham\\clone\\SentimentAnalysis\\SentimentAnalysis.Infrastructure\\SentimentAnalysis.Infrastructure.csproj"
             }
           }
         }
@@ -1608,7 +1693,8 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      }
+      },
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net8.0": {
@@ -1621,6 +1707,10 @@
           "Microsoft.Extensions.ML": {
             "target": "Package",
             "version": "[4.0.2, )"
+          },
+          "Polly": {
+            "target": "Package",
+            "version": "[8.6.2, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",
@@ -1638,6 +1728,24 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[8.0.19, 8.0.19]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[8.0.19, 8.0.19]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[8.0.19, 8.0.19]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[8.0.19, 8.0.19]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -1646,7 +1754,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.412/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

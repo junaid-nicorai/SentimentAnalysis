@@ -3,6 +3,7 @@ using SentimentAnalysis.Core;
 using SentimentAnalysis.Infrastructure;
 using Microsoft.Extensions.ML;
 using ModelTrainer.Models;
+using Polly;
 
 var builder = WebApplication.CreateBuilder(args);
 

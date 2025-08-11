@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\muham\\Desktop\\sentiment\\SentimentAnalysis.Core\\SentimentAnalysis.Core.csproj": {}
+    "C:\\Users\\muham\\clone\\SentimentAnalysis\\SentimentAnalysis.Core\\SentimentAnalysis.Core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\muham\\Desktop\\sentiment\\ModelTrainer\\ModelTrainer.csproj": {
+    "C:\\Users\\muham\\clone\\SentimentAnalysis\\ModelTrainer\\ModelTrainer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\muham\\Desktop\\sentiment\\ModelTrainer\\ModelTrainer.csproj",
+        "projectUniqueName": "C:\\Users\\muham\\clone\\SentimentAnalysis\\ModelTrainer\\ModelTrainer.csproj",
         "projectName": "ModelTrainer",
-        "projectPath": "C:\\Users\\muham\\Desktop\\sentiment\\ModelTrainer\\ModelTrainer.csproj",
+        "projectPath": "C:\\Users\\muham\\clone\\SentimentAnalysis\\ModelTrainer\\ModelTrainer.csproj",
         "packagesPath": "C:\\Users\\muham\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\muham\\Desktop\\sentiment\\ModelTrainer\\obj\\",
+        "outputPath": "C:\\Users\\muham\\clone\\SentimentAnalysis\\ModelTrainer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\muham\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -37,7 +37,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -59,23 +60,41 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.19, 8.0.19]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[8.0.19, 8.0.19]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.19, 8.0.19]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[8.0.19, 8.0.19]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.412/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\muham\\Desktop\\sentiment\\SentimentAnalysis.Core\\SentimentAnalysis.Core.csproj": {
+    "C:\\Users\\muham\\clone\\SentimentAnalysis\\SentimentAnalysis.Core\\SentimentAnalysis.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\muham\\Desktop\\sentiment\\SentimentAnalysis.Core\\SentimentAnalysis.Core.csproj",
+        "projectUniqueName": "C:\\Users\\muham\\clone\\SentimentAnalysis\\SentimentAnalysis.Core\\SentimentAnalysis.Core.csproj",
         "projectName": "SentimentAnalysis.Core",
-        "projectPath": "C:\\Users\\muham\\Desktop\\sentiment\\SentimentAnalysis.Core\\SentimentAnalysis.Core.csproj",
+        "projectPath": "C:\\Users\\muham\\clone\\SentimentAnalysis\\SentimentAnalysis.Core\\SentimentAnalysis.Core.csproj",
         "packagesPath": "C:\\Users\\muham\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\muham\\Desktop\\sentiment\\SentimentAnalysis.Core\\obj\\",
+        "outputPath": "C:\\Users\\muham\\clone\\SentimentAnalysis\\SentimentAnalysis.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\muham\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -90,8 +109,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\muham\\Desktop\\sentiment\\ModelTrainer\\ModelTrainer.csproj": {
-                "projectPath": "C:\\Users\\muham\\Desktop\\sentiment\\ModelTrainer\\ModelTrainer.csproj"
+              "C:\\Users\\muham\\clone\\SentimentAnalysis\\ModelTrainer\\ModelTrainer.csproj": {
+                "projectPath": "C:\\Users\\muham\\clone\\SentimentAnalysis\\ModelTrainer\\ModelTrainer.csproj"
               }
             }
           }
@@ -105,7 +124,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -121,12 +141,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.19, 8.0.19]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.19, 8.0.19]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[8.0.19, 8.0.19]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.412/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
